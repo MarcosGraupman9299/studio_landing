@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #FFF0F5; 
+    background-color: #e1dbdd; 
 }
 
 body, input, textarea {
@@ -22,8 +22,8 @@ form button {
 
 header {
     padding: 16px 0;
-    background-color: #FBEDE3;
-    color: #ecb500;
+    background-color:#f4bcd0;
+    color: #823939;
 }
 
 header nav li {
@@ -33,7 +33,7 @@ header nav li {
 }
 
 header, nav, li, a {
-    color: #ecb500;
+    color: #823939;
     text-decoration: none;
 }
 
@@ -125,14 +125,14 @@ section h3 {
 }
 
 form button {
-    background-color: #FADADD;
-    color: #ecb500;
+    background-color: #ef7d89;
+    color: #823939;
     border: none;
     cursor: pointer;
 }
 
 form button:hover {
-    background-color: #ddb4b8;
+    background-color: #ef7d89;
 }
 
 input:focus, textarea:focus {
@@ -140,8 +140,67 @@ input:focus, textarea:focus {
 }
 
 footer {
-    background-color: #FADADD;
-    color: #ecb500;
+    background-color: #ef7d89;
+    color: #823939;
     padding: 16px 0;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+
+/* Tablets (até 1024px) */
+@media (max-width: 1024px) {
+    header .container,
+    section .container,
+    .contact-methods {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .artist {
+        margin-right: 0;
+        margin-bottom: 16px;
+        width: 100%;
+        height: auto;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .brands-list li,
+    .social-links li {
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+}
+
+/* Celulares (até 768px) */
+@media (max-width: 768px) {
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-top: 12px;
+    }
+
+    header nav li {
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    section h2, section h3 {
+        font-size: 1.4em;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    footer {
+        text-align: center;
+    }
 }
 
